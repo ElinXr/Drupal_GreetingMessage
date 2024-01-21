@@ -1,0 +1,47 @@
+<?php
+
+/**
+ * @file
+ * Provides basic hook implementations for the Greeting Message module.
+ */
+
+/**
+ * Implements hook_help().
+ *
+ * @param $route_name
+ * @param \Drupal\Core\Routing\RouteMatchInterface $route_match
+ *
+ * @return string|void
+ */
+function nm_greeting_message_help($route_name, \Drupal\Core\Routing\RouteMatchInterface $route_match) {
+  // Provides help text to the user via the UI.
+  switch ($route_name) {
+    case 'help.page.nm_greeting_message':
+      $output = t('
+        <h2>Greeting Message.</h2>
+        <h3>Use this module to provide a greeting message to your end user.</h3>
+        ');
+      return $output;
+  }
+}
+
+/**
+ * Implements hook_theme().
+ *
+ * @param $existing
+ * @param $type
+ * @param $theme
+ * @param $path
+ *
+ * @return array[]
+ */
+function nm_greeting_message_theme($existing, $type, $theme, $path) {
+  return [
+    'greeting_text' => [
+      'variables' => [
+          'greeting_text' => '',
+      ],
+      'template' => 'greeting',
+    ],
+  ];
+}

@@ -1,0 +1,7 @@
+nm_greeting_message.settings:
+  path: '/admin/config/development/greeting'
+  defaults:
+    _form: '\Drupal\nm_greeting_message\Form\GreetingMessageForm'
+    _title: 'Greeting Message Settings'
+  requirements:
+    _permission: 'administer greeting message'

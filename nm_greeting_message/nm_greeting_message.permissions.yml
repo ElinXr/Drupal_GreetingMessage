@@ -1,0 +1,3 @@
+administer greeting message:
+  title: 'Provide greeting message to the end user.'
+  description: 'The greeting message will appear in a block that you attach to the desired region.'

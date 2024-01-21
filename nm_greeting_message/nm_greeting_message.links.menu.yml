@@ -1,0 +1,5 @@
+nm_greeting_message.settings:
+  title: 'Greeting Message settings'
+  description: 'Provide a greeting message to the end user.'
+  route_name: nm_greeting_message.settings
+  parent: 'system.admin_config_development'

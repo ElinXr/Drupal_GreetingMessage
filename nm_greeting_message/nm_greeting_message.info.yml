@@ -1,0 +1,6 @@
+name: Greeting Message
+type: module
+description: 'Provides a greeting message to the end user.'
+package: NM custom
+core_version_requirement: ^10
+configure: nm_greeting_message.settings

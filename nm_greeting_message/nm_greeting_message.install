@@ -1,0 +1,22 @@
+<?php
+
+/**
+ * @file
+ * Install, uninstall and update hooks for Greeting Message module.
+ */
+
+use Drupal\user\Entity\Role;
+
+/**
+ * Implements hook_install().
+ */
+function nm_greeting_message_install() {
+  $role = Role::load('content_editor');
+
+  if($role){
+    user_role_change_permissions($role->id(), [
+      'administer greeting message' => TRUE,
+    ]);
+  }
+
+}
